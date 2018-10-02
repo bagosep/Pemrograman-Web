@@ -25,13 +25,13 @@
 	            <td>07 - Februari - 1998</td>          
 	          </tr>
 	          <tr>
-	           <td><button><a href="#popup" class="popup-link">Info Lebih Lanjut</a></button></td>  
+	           <td><button onclick="myFunction()"><a href="#popup" class="popup-link">Info Lebih Lanjut</a></button></td>  
 	           <td><button><a href="index.php">Biodata Lainnya</a></button></td>          
 	          </tr>
 	         
 	      	</table>		
 		</div>
-        <div class="popup-wrapper" id="popup">
+        <div class="popup-wrapper" id="popup" style="display: none;">
 			<div class="popup-container">
 				<table width="100%" style="font-size:14px; border-radius: 8px; border:1px solid #64abff">
 			        <tr>
@@ -71,7 +71,7 @@
 			            <td class="font-popup">Bulu Tangkis</td>          
 			          </tr>       
 	      	    </table>	
-				<a class="popup-close" href="#closed">X</a>
+				<a class="popup-close" onclick="myFunctionClose()" href="#closed">X</a>
 			</div>
 		</div>
 	</section>
@@ -79,3 +79,11 @@
 <?php
     include("footer.php");
 ?>
+<script>
+function myFunction() {
+  document.getElementById("popup").style.display= '';
+}
+function myFunctionClose() {
+  document.getElementById("popup").style.display= 'none';
+}
+</script>
